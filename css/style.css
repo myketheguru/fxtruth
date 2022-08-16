@@ -1,0 +1,193 @@
+/* Root Defs */
+:root {
+    --dark: #000000;
+    --semi-dark: #1C1C1C;
+    --light: #eeeeee;
+    --grey: #A0A0A0;
+    --primary: mediumaquamarine;
+}
+
+/* Page Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 17px;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+/* Site Navigation */
+nav {
+    padding: 12px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .brand {
+    font-size: 0.8rem;
+    color: #949c9b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav #logo {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: 200;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+
+nav .links {
+    display: flex;
+    gap: 5px;
+}
+
+nav .links a {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: 200;
+    padding: 5px;
+}
+
+nav button {
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: var(--primary);
+    box-shadow: 0 0 15px #53d6c4;
+    border: none;
+    cursor: pointer;
+    color: #eeeeee;
+}
+
+nav button:hover {
+    box-shadow: 0 5px 15px 5px #47a699;
+}
+
+/* Hero */
+.hero {
+    padding: 10px 5%;
+    display: flex;
+    gap: 50px;
+}
+
+.hero > * {
+    flex: 1 1 100%;
+}
+
+.hero .write-up {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 100px;
+}
+
+.hero .write-up h1 {
+    font-size: 6vmin;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    color: #A0A0A0;
+}
+
+.hero .write-up h1 span:nth-child(2) {
+    font-size: 10vmin;
+    font-weight: 600;
+    color: #eeeeee;
+}
+
+.hero .write-up p {
+    font-weight: 300;
+    color: #c8d2d0;
+}
+
+.hero .write-up button {
+    align-self: start;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
+.hero figure {
+    /* max-width: 500px; */
+    width: 100%;
+    padding-top: 100px;
+}
+
+.hero figure img {
+    width: 100%;
+}
+
+/* About */
+
+.about-us {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #000, #000a), url('../assets/man-analyzing-stock-market-charts-financial-data-electronic-board.jpg');
+    background-size: cover;
+    padding: 30px 5%;
+}
+
+.about-us h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #808988;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+    }
+    
+    nav .links {
+        display: none;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero .write-up {
+        align-items: center;
+        padding: 50px 5%;
+    }
+
+    .hero .write-up button {
+        align-self: center;
+    }
+
+    .hero figure {
+        max-width: 500px;
+        width: 100%;
+        padding: 10px;
+    }
+}
